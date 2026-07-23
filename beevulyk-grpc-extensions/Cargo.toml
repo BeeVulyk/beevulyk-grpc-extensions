@@ -1,0 +1,37 @@
+[package]
+name = "beevulyk-grpc-extensions"
+version = "0.1.0"
+edition = "2021"
+description = "BeeVulyk fork of my-grpc-extensions: gRPC client/server helpers, channel pooling and stream utilities for tonic."
+repository = "https://github.com/BeeVulyk/beevulyk-grpc-extensions"
+homepage = "https://github.com/BeeVulyk/beevulyk-grpc-extensions"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+default = []
+adjust-server-stream = []
+grpc-client = ["beevulyk-grpc-client-macros"]
+grpc-server = ["beevulyk-grpc-server-macros"]
+
+
+[dependencies]
+beevulyk-rust-extensions = { git = "https://github.com/BeeVulyk/beevulyk-rust-extensions.git", tag = "0.1.0" }
+
+lazy_static = "*"
+
+tokio = { version = "*", features = ["full"] }
+tonic = { version = "0.14" }
+hyper = { version = "*" }
+hyper-util = { version = "*", features = ["tokio"] }
+futures-util = "*"
+tokio-stream = "*"
+futures = "*"
+async-trait = "*"
+tower = { version = "*" }
+beevulyk-grpc-client-macros = { optional = true, path = "../beevulyk-grpc-client-macros" }
+beevulyk-grpc-server-macros = { optional = true, path = "../beevulyk-grpc-server-macros" }
+external-dependencies = { path = "../external-dependencies" }
+futures-core = "*"
+tracing = "*"
+thiserror= "*"

@@ -1,0 +1,12 @@
+[package]
+name = "external-dependencies"
+version = "0.1.0"
+edition = "2021"
+description = "Workspace-internal prelude re-exporting external types (futures_core::Stream) for beevulyk-grpc-extensions."
+repository = "https://github.com/BeeVulyk/beevulyk-grpc-extensions"
+homepage = "https://github.com/BeeVulyk/beevulyk-grpc-extensions"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+futures-core = "*"

@@ -1,0 +1,8 @@
+[workspace]
+resolver = "2"
+members = [
+    "beevulyk-grpc-extensions",
+    "beevulyk-grpc-client-macros",
+    "beevulyk-grpc-server-macros",
+    "external-dependencies",
+]

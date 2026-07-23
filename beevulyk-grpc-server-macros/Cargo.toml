@@ -1,0 +1,19 @@
+[package]
+name = "beevulyk-grpc-server-macros"
+version = "0.1.0"
+edition = "2021"
+description = "Proc-macros for generating gRPC server boilerplate for beevulyk-grpc-extensions."
+repository = "https://github.com/BeeVulyk/beevulyk-grpc-extensions"
+homepage = "https://github.com/BeeVulyk/beevulyk-grpc-extensions"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+proc-macro = true
+
+[dependencies]
+types-reader = { tag = "0.5.1", git = "https://github.com/MyJetTools/types-reader.git" }
+
+syn = { version = "*", features = ["extra-traits"] }
+quote = "*"
+proc-macro2 = "*"
